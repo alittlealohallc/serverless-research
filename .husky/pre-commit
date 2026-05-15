@@ -1,0 +1,22 @@
+#!/bin/zsh
+set -e
+
+echo "Running pre-commit checks..."
+
+# Run your existing tests/lint here
+npm run test
+npm run lint
+
+# Check if there are unstaged changes in packages/
+if git diff --quiet -- packages/; then
+  echo "No changes in packages/. Skipping changeset."
+  exit 0
+fi
+
+# If changes exist and no changeset is staged, prompt user
+if ! git diff --cached --name-only | grep -q "\.changeset/"; then
+  echo "Changes detected in packages/. Please run 'npm run changeset' to create a changeset."
+  exit 1
+fi
+
+echo "Pre-commit checks passed."
