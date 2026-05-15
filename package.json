@@ -1,6 +1,6 @@
 {
   "name": "serverless-research",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "research project to compare performance, uptime, security of AWS, Cloudflare, and Oracle",
   "keywords": [
     "serverless",
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alittlealoha/serverless-research.git"
+    "url": "https://github.com/alittlealohallc/serverless-research.git"
   },
   "license": "MIT",
   "author": "Kent Schaeffer <kent@alittlealoha.pro> (https://alittlealoha.pro)",
@@ -36,13 +36,13 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "eslint": "^10.4.0",
+    "lint": "^1.2.2"
   },
   "dependencies": {
     "axios": "^1.16.1",
     "cheerio": "^1.2.0",
-    "csv-parse": "^6.2.1",
-    "eslint": "^10.4.0",
-    "lint": "^1.2.2"
+    "csv-parse": "^6.2.1"
   }
 }
